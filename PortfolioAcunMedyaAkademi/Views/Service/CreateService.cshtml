@@ -1,0 +1,26 @@
+﻿@model PortfolioAcunMedyaAkademi.Models.TblService
+@{
+    ViewBag.Title = "CreateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Servis Ekleme</h2>
+<form method="post">
+   
+  
+    <lable>Ad</lable>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+
+    <br />
+    <lable>Açıklama</lable>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+
+    <lable>Resim</lable>
+    @Html.TextBoxFor(x => x.IconUrl, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+
+
+
+</form>

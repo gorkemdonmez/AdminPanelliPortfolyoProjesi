@@ -1,0 +1,24 @@
+﻿@model PortfolioAcunMedyaAkademi.Models.TblHobby
+@{
+    ViewBag.Title = "UpdateHobby";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Hobi Güncelleme</h2>
+<form method="post">
+
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.HobbyId, new { @class = "form-control" })
+    <br />
+    <label>Resim</label>
+    @Html.TextBoxFor(x => x.IconUrl, new { @class = "form-control" })
+    <br />
+    <label>Title</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+
+
+</form>
+

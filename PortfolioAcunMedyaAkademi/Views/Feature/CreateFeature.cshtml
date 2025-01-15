@@ -1,0 +1,26 @@
+﻿@model PortfolioAcunMedyaAkademi.Models.TblFeature
+@{
+    ViewBag.Title = "CreateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Özellik Ekleme</h2>
+<form method="post">
+
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.TblFeatureId, new { @class = "form-control" })
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.FeatureTitle, new { @class = "form-control" })
+    <br />
+    <label>Alt Başlık</label>
+    @Html.TextBoxFor(x => x.FeatureSubtitle, new { @class = "form-control" })
+    <br />
+    <label> Resim</label>
+    @Html.TextBoxFor(x => x.FeatureImageUrl, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-info">Kaydet</button>
+
+
+</form>

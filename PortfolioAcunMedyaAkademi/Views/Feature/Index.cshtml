@@ -1,0 +1,32 @@
+﻿@model List<PortfolioAcunMedyaAkademi.Models.TblFeature>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Ana Sayfa</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>-
+        <th>Resim</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.TblFeatureId</td>
+            <td>@item.FeatureTitle</td>
+            <td>@item.FeatureSubtitle</td>
+            <td>@item.FeatureImageUrl</td>
+            <td><a href="/Feature/UpdateFeature/@item.TblFeatureId" class="btn btn-warning"> Güncelle</a></td>
+            <td><a href="/Feature/DeleteFeature/@item.TblFeatureId" class="btn btn-danger"> Sil</a></td>
+        </tr>
+    }
+
+</table>
+
+<td><a href="/Feature/CreateFeature/" class="btn btn-primary">Özellik Ekle</a></td>

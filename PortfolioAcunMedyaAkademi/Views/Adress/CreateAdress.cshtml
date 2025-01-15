@@ -1,0 +1,29 @@
+﻿@model PortfolioAcunMedyaAkademi.Models.TblAdress
+@{
+    ViewBag.Title = "CreateAdress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Adres Ekleme Sayfası</h2>
+<form method="post">
+
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.Adresid, new { @class = "form-control" })
+    <br />
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.Adres, new { @class = "form-control" })
+    <br />
+    <label>Telefon Numarası</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <br />
+    <label>Emaili</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+    <label>Websitesi</label>
+    @Html.TextBoxFor(x => x.Website, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+
+
+</form>
